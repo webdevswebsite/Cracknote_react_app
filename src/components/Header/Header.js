@@ -52,7 +52,7 @@ function Header(props) {
   }, []);
   const classes = useStyles();
   const theme = useTheme();
-  const { onToggleDark, onToggleDir, invert } = props;
+  const { invert } = props;
   // const { t } = useTranslation("common");
 
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
@@ -64,6 +64,7 @@ function Header(props) {
     createData(navMenu[3], "#" + navMenu[3], 80),
     createData(navMenu[4], "#" + navMenu[4], 40),
   ]);
+  console.log(menuList)
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -107,7 +108,7 @@ function Header(props) {
                 </a>
               ) : (
                   <AnchorLink href="#home">
-                    <h4>Cracknote</h4>
+                    <h4>Cracknote Technologies</h4>
                   {/* <img src={logo} alt="logo" /> */}
                   
                 </AnchorLink>
