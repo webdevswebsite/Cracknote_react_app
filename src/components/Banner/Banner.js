@@ -173,7 +173,7 @@ function Banner() {
                   return window.FlutterwaveCheckout({
                     public_key: "FLWPUBK-00f1a8bfd678ad383f650cd6cccd643b-X",
                     // amount: total,
-                    amount: 50,
+                    amount: 20,
                     currency: "USD",
                     tx_ref: new Date().toISOString(),
                     customer: {
