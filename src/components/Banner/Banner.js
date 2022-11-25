@@ -5,11 +5,9 @@ import Hidden from "@material-ui/core/Hidden";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import Select from "@material-ui/core/Select";
-import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import Typography from "@material-ui/core/Typography";
-import SearchIcon from "@material-ui/icons/Search";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
@@ -24,7 +22,7 @@ function Banner() {
 
   // Media Query
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  // const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   // Translation Function
   // const { t } = useTranslation('common');
