@@ -99,7 +99,7 @@ function Banner() {
         <div className={classes.bannerWrap}>
           <div className={classes.text}>
             <Typography variant="h4" className={text.title2}>
-              <h4>Hosting for every website.</h4>
+              <h4 style={{ color: '#f50057' }}>Hosting for every website.</h4>
             </Typography>
             <Typography component="p" className={text.subtitle2}>
               <h6 style={{ color: '#fff' }}>Kindly fill in your domain details, submit, and your available domain details will be emailed to you (T&C Apply).  </h6>
@@ -116,7 +116,7 @@ function Banner() {
                     <input type="email" name="#" className="form-control form-control-custom" placeholder="Type your email" required
                       onBlur={(e) => {
                         localStorage.setItem("email", e.target.value)
-                      }}/>
+                      }} />
                   </div>
                 </div>
 
@@ -127,7 +127,7 @@ function Banner() {
                   className={classes.search}
                   label="Type your desired domain name here"
                   onChange={(e) => handleChange(e, "name")}
-                 
+
                 />
 
                 <div className={classes.action}>
@@ -187,7 +187,7 @@ function Banner() {
                     },
                   });
                 }
-              } type="submit" href='#' className="submit-domain">Submit domain details</button>
+              } type="submit" href='#' className="submit-domain">Submit Details</button>
             </form>
           </div>
         </div>

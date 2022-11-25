@@ -115,7 +115,7 @@ function Footer(props) {
         <Grid container spacing={6}>
           <Grid item xs={12} md={5}>
             <div className={classes.logo}>
-              <h1 style={{color:'#ffff'}}>Cracknote</h1>
+              <h1 style={{ color:'#f50057'}}>Cracknote</h1>
               {/* <img src={logo} alt="logo" /> */}
               <Typography variant="h6" color="textPrimary">
                 {/* {brand.hosting.projectName} */}

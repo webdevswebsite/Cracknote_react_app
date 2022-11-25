@@ -108,7 +108,7 @@ function Header(props) {
                 </a>
               ) : (
                   <AnchorLink href="#home">
-                    <h4>Cracknote Technologies</h4>
+                    <h4 style={{ color:'#f50057'}}>Cracknote Technologies</h4>
                   {/* <img src={logo} alt="logo" /> */}
                   
                 </AnchorLink>
