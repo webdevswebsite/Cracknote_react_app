@@ -2,121 +2,74 @@ const feature = {
   personal: [
     {
       type: 'plus',
-      text: 'Nam sollicitudin dignissim',
+      text: '1 GB Disk Space',
     },
     {
       type: 'plus',
-      text: 'Donec commodo convallis',
+      text: '10 GB Bandwidth',
     },
     {
       type: 'minus',
-      text: 'Cras convallis lacus orci',
+      text: 'No addon domain',
     },
     {
       type: 'minus',
-      text: 'Curabitur egestas consequat',
+      text: 'Free SSL Cert Available',
     },
-    {
-      type: 'minus',
-      text: 'Quisque ut metus sit amet',
-    },
-    {
-      type: 'minus',
-      text: 'Aliquam lobortis magna ',
-    },
-    {
-      type: 'minus',
-      text: 'Suspendisse porttitor velit nisl',
-    },
+  
   ],
   startup: [
     {
       type: 'plus',
-      text: 'Nam sollicitudin dignissim',
+      text: '2 GB Disk Space',
     },
     {
       type: 'plus',
-      text: 'Donec commodo convallis',
+      text: '20 GB Bandwidth',
     },
     {
       type: 'minus',
-      text: 'Cras convallis lacus orci',
+      text: '1 addon domain',
     },
     {
       type: 'minus',
-      text: 'Curabitur egestas consequat',
-    },
-    {
-      type: 'minus',
-      text: 'Quisque ut metus sit amet',
-    },
-    {
-      type: 'minus',
-      text: 'Aliquam lobortis magna ',
-    },
-    {
-      type: 'minus',
-      text: 'Suspendisse porttitor velit nisl',
+      text: 'Free SSL Cert Available',
     },
   ],
   company: [
     {
       type: 'plus',
-      text: 'Nam sollicitudin dignissim',
+      text: '6 GB Disk Space',
     },
     {
       type: 'plus',
-      text: 'Donec commodo convallis',
+      text: 'Unlimited Bandwidth',
     },
     {
       type: 'minus',
-      text: 'Cras convallis lacus orci',
+      text: 'Free domains available (.name.ng, .com.ng, .org.ng, .sch.ng, .i.ng)',
     },
     {
       type: 'minus',
-      text: 'Curabitur egestas consequat',
-    },
-    {
-      type: 'minus',
-      text: 'Quisque ut metus sit amet',
-    },
-    {
-      type: 'minus',
-      text: 'Aliquam lobortis magna ',
-    },
-    {
-      type: 'minus',
-      text: 'Suspendisse porttitor velit nisl',
+      text: 'Free SSL Cert Available',
     },
   ],
   bigshot: [
     {
       type: 'plus',
-      text: 'Nam sollicitudin dignissim',
+      text: '10 GB Disk Space',
     },
     {
       type: 'plus',
-      text: 'Donec commodo convallis',
+      text: 'Unlimited Bandwidth',
     },
     {
       type: 'minus',
-      text: 'Cras convallis lacus orci',
+      text: '3 addon domain',
     },
     {
       type: 'minus',
-      text: 'Curabitur egestas consequat',
-    },
-    {
-      type: 'minus',
-      text: 'Quisque ut metus sit amet',
-    },
-    {
-      type: 'minus',
-      text: 'Aliquam lobortis magna ',
-    },
-    {
-      type: 'minus',
-      text: 'Suspendisse porttitor velit nisl',
+      text: 'Free SSL Cert Available',
     },
   ],
 };
