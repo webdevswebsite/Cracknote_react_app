@@ -180,7 +180,7 @@ function Banner() {
                       email: localStorage.getItem("email"),
                     },
                     customizations: {
-                      title: "CRACKNOTE TECHNOLOGES",
+                      title: "CRACKNOTE TECHNOLOGIES",
                     },
                     callback: async function () {
                       alert('Payment successful...We will reach out to you for further details')
