@@ -45,7 +45,7 @@ function Pricing(props) {
                 <i className="ion-ios-close-circle-outline" />
               </span>
             )}
-            {item.text}
+            {/* {item.text} */}
           </li>
         ))}
       </ul>
