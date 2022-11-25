@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import Container from "@material-ui/core/Container";
 import Hidden from "@material-ui/core/Hidden";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import Select from "@material-ui/core/Select";
 import Paper from "@material-ui/core/Paper";
