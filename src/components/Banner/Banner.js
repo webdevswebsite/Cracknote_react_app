@@ -104,7 +104,7 @@ function Banner() {
             <Typography component="p" className={text.subtitle2}>
               <h6 style={{ color: '#fff' }}>Kindly fill in your domain details, submit, and your available domain details will be emailed to you (T&C Apply).  </h6>
             </Typography>
-            <form>
+            <form >
               <div className="row">
                 <div className="col-lg-10 col-md-6" style={{ marginBottom: '-30px' }}>
                   <div className="form-group  email-input">
@@ -113,7 +113,7 @@ function Banner() {
                       localStorage.setItem('email', e.target.value)
                     }
                     }>Email Address:</label>
-                    <input type="email" name="#" className="form-control form-control-custom" placeholder="Type your email"
+                    <input type="email" name="#" className="form-control form-control-custom" placeholder="Type your email" required
                       onBlur={(e) => {
                         localStorage.setItem("email", e.target.value)
                       }}/>
@@ -127,7 +127,7 @@ function Banner() {
                   className={classes.search}
                   label="Type your desired domain name here"
                   onChange={(e) => handleChange(e, "name")}
-                
+                 
                 />
 
                 <div className={classes.action}>
