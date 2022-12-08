@@ -33,6 +33,12 @@ code {
    font-weight: 700;
  }
 
+ .currency{
+  font-weight: 600px;
+  color: #f50057;
+}
+
+
  .submit-domain{
    background: #f50057;
    color: #ffff;
@@ -45,3 +51,12 @@ code {
    font-size: 20px;
    font-weight: 500;
  }
+
+ @media (max-width:425px) {
+  .currency{
+    margin-top: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -14,8 +14,19 @@ import FormControl from "@material-ui/core/FormControl";
 // import { useTranslation } from 'next-i18next';
 import { useText } from "../../theme/common";
 import useStyles from "./banner-style";
+import { CurrencyState } from "../../context/CurrencyContext";
+
 
 function Banner() {
+
+  const price = {
+    USD: 50
+  }
+
+  const {
+    state: { currency, rate }
+  } = CurrencyState()
+
   const classes = useStyles();
   const text = useText();
   const elem = useRef(null);
@@ -173,8 +184,8 @@ function Banner() {
                   return window.FlutterwaveCheckout({
                     public_key: "FLWPUBK-00f1a8bfd678ad383f650cd6cccd643b-X",
                     // amount: total,
-                    amount: 20,
-                    currency: "USD",
+                    amount: currency !== '$' ? price.USD * rate : price.USD,
+                    currency: localStorage.getItem('currency') || 'USD',
                     tx_ref: new Date().toISOString(),
                     customer: {
                       email: localStorage.getItem("email"),

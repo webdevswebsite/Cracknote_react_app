@@ -18,6 +18,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import MobileMenu from "./MobileMenu";
 import useStyles from "./header-style";
 import navMenu from "./menu";
+import { CurrencyState } from "../../context/CurrencyContext";
+
 
 let counter = 0;
 function createData(name, url, offset) {
@@ -36,7 +38,31 @@ const LinkBtn = React.forwardRef(function LinkBtn(props, ref) {
 });
 
 function Header(props) {
-  const [fixed, setFixed] = useState(false);
+
+  const {
+    state: { currency, currencies, rate },
+    dispatch: dispatchCurrency
+  } = CurrencyState();
+
+  console.log(currency, rate)
+
+  const [ activeCurrency, setActiveCurrency ] = useState(localStorage.getItem('currency'))
+  console.log(setActiveCurrency)
+
+  const handleChangeCurrency = ({ target: { value } }) => {
+    dispatchCurrency({
+      type: value,
+      payload: value
+    })
+  }
+
+  useEffect(() => {
+    if (activeCurrency === undefined)
+      return window.localStorage.setItem('currency', activeCurrency || 'USD')
+  }, [ activeCurrency ])
+
+
+  const [ fixed, setFixed ] = useState(false);
   let flagFixed = false;
   const handleScroll = () => {
     const doc = document.documentElement;
@@ -57,15 +83,15 @@ function Header(props) {
 
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [menuList] = useState([
-    createData(navMenu[0], "#" + navMenu[0], 200),
-    createData(navMenu[1], "#" + navMenu[1], 70),
-    createData(navMenu[2], "#" + navMenu[2]),
-    createData(navMenu[3], "#" + navMenu[3], 80),
-    createData(navMenu[4], "#" + navMenu[4], 40),
+  const [ menuList ] = useState([
+    createData(navMenu[ 0 ], "#" + navMenu[ 0 ], 200),
+    createData(navMenu[ 1 ], "#" + navMenu[ 1 ], 70),
+    createData(navMenu[ 2 ], "#" + navMenu[ 2 ]),
+    createData(navMenu[ 3 ], "#" + navMenu[ 3 ], 80),
+    createData(navMenu[ 4 ], "#" + navMenu[ 4 ], 40),
   ]);
   console.log(menuList)
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [ openDrawer, setOpenDrawer ] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
@@ -107,20 +133,32 @@ function Header(props) {
                   {"brand.hosting.name"}
                 </a>
               ) : (
-                  <AnchorLink href="#home">
-                    <h4 style={{ color:'#f50057'}}>Cracknote Technologies</h4>
+                <AnchorLink href="#home">
+                  <h4 style={{ color: '#f50057' }}>Cracknote Technologies</h4>
                   {/* <img src={logo} alt="logo" /> */}
-                  
+
                 </AnchorLink>
               )}
             </div>
-            <nav className={classes.userMenu}>
-             
-       
+            <nav className={`currency ${classes.userMenu}`} style={{ color: '#f50057', fontWeight: '600px' }}>
+              <span className="currtext">Currency :</span>
+              <select style={{ border: 'none', color: '#f50057' }} defaultValue={activeCurrency} onChange={handleChangeCurrency} >
+                {currencies.map((currency, idx) => (
+                  <option
+                    defaultValue={activeCurrency}
+                    value={currency}
+                    key={idx + currency}
+
+                    style={{ color: '#f50057' }}
+                  >
+                    {currency}
+                  </option>
+                ))}
+              </select>
             </nav>
           </Container>
         </div>
- 
+
       </AppBar>
     </Fragment>
   );

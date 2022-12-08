@@ -6,11 +6,20 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 // import { useTranslation } from 'next-i18next';
 import useStyles from "./cards-style";
+import { CurrencyState } from "../../context/CurrencyContext";
+
 
 function Pricing(props) {
+
+  const {
+    state: { currency, rate }
+  } = CurrencyState()
+
+console.log(currency, rate)
   const classes = useStyles();
   // const { t } = useTranslation('common');
   const { title, price, img, featureList, desc, highlighted } = props;
+  let priceToNum = parseInt(price)
   return (
     <Paper
       className={clsx(classes.pricing, highlighted && classes.highlighted)}
@@ -19,10 +28,12 @@ function Pricing(props) {
         <Typography variant="h6">{title}</Typography>
         <img src={img} alt="img" />
         <Typography variant="h5">
-          {price > 0 && "$"}
+          {/* {price > 0 && "$"} */}
+          {currency}
           {price > 0 ? (
             <Fragment>
-              {price}
+              {/* {price} */}
+              {currency !== '$' ? priceToNum * rate : price}
               <span>/mo</span>
             </Fragment>
           ) : (
