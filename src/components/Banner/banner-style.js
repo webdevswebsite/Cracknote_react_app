@@ -6,8 +6,8 @@ const bannerStyles = makeStyles((theme) => ({
   root: {
     background:
       theme.palette.type === "dark"
-        ? theme.palette.primary.dark
-        : theme.palette.primary.light,
+        ? "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg"
+        : "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg",
   },
   decoWrap: {
     position: "absolute",
@@ -17,8 +17,8 @@ const bannerStyles = makeStyles((theme) => ({
     overflow: "hidden",
     background:
       theme.palette.type === "dark"
-        ? theme.palette.primary.dark
-        : theme.palette.primary.light,
+        ? "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg"
+        : "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg",
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -26,8 +26,8 @@ const bannerStyles = makeStyles((theme) => ({
   cloudDeco: {
     background: `url(${
       theme.palette.type === "dark"
-        ? "/images/hosting/cloud_bottom_dark.svg"
-        : "/images/hosting/cloud_bottom_light.svg"
+        ? "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg"
+        : "/images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg"
     }) repeat-x center 80px`,
     width: "100%",
     height: 360,

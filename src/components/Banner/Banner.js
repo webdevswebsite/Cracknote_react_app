@@ -85,7 +85,7 @@ function Banner() {
   };
 
   return (
-    <div className={classes.root} ref={elem}>
+    <div className={`hero ${classes.root} ref={elem}`}>
       <div className={classes.decoWrap}>
         <div className={clsx(classes.decoInner, hide && classes.hide)}>
           <div className={classes.illustration} id="net_art" />

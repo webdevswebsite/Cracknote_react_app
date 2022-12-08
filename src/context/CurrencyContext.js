@@ -14,7 +14,7 @@ const CurrencyContext = ({ children }) => {
     const [ state, dispatch ] = useReducer(currencyReducer, {
         currency: currency,
         currencies: [ "USD", "NGN" ],
-        rate: 144
+        rate: 460
     })
 
     return (

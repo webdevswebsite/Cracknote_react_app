@@ -60,3 +60,11 @@ code {
     flex-direction: column;
   }
 }
+
+.hero{
+  /* margin-top: 0px; */
+  background: url(./images/cracknoteimg/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
